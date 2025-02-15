@@ -615,6 +615,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 110335653}
+    - target: {fileID: 534055303936507417, guid: 67915a25b2dff7247a9d8bed3b9c050a, type: 3}
+      propertyPath: xOffset
+      value: -8
+      objectReference: {fileID: 0}
     - target: {fileID: 2413343047956990243, guid: 67915a25b2dff7247a9d8bed3b9c050a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

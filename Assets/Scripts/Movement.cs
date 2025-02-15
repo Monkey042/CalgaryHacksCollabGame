@@ -5,6 +5,7 @@ public enum MoverType { Basic, Jumper, Slower, Shrinker, Pusher }
 
 public class Movement : MonoBehaviour
 {
+    public bool isActive;
     [SerializeField] private float speed;
     private Rigidbody2D rb;
 

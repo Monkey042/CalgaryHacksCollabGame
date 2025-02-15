@@ -6,7 +6,7 @@ public class DuplicationUI : MonoBehaviour
 
     public GameObject player;
 
-    public float yOffset = 1f;
+    public float yOffset = 1f, xOffset = 1f;
 
     public void enableCanvas() 
     {
@@ -23,7 +23,7 @@ public class DuplicationUI : MonoBehaviour
     public void duplicate(GameObject playerPrefab)
     {
         disableCanvas();
-        Vector3 offset = new Vector3(0, yOffset, 0);
+        Vector3 offset = new Vector3(xOffset, yOffset, 0);
         GameObject duplicate = Instantiate(playerPrefab, player.transform.position + offset, Quaternion.Euler(0, 0, 0));
     }
 }
