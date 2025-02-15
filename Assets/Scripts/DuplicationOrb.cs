@@ -10,5 +10,6 @@ public class DuplicationOrb : MonoBehaviour
     {
         duplicationUI.enableCanvas();
         Destroy(gameObject);
+        other.gameObject.GetComponent<Movement>().isActive = false;
     }
 }

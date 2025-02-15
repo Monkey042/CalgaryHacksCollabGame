@@ -29,20 +29,27 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
-        if (moverType == MoverType.Jumper)
+        if (isActive)
         {
-            Jumper();
-        }
-        else if (moverType == MoverType.Shrinker)
-        {
-            Shrinker();
+            if (moverType == MoverType.Jumper)
+            {
+                Jumper();
+            }
+            else if (moverType == MoverType.Shrinker)
+            {
+                Shrinker();
+            }
         }
     }
 
     private void FixedUpdate()
     {
-        float horizontalMove = Input.GetAxis("Horizontal") * speed * 10;
-        rb.linearVelocity = new Vector2(horizontalMove, rb.linearVelocity.y);
+        if (isActive)
+        {
+            float horizontalMove = Input.GetAxis("Horizontal") * speed * 10;
+            rb.linearVelocity = new Vector2(horizontalMove, rb.linearVelocity.y);
+        }
+
     }
 
     private void Jumper()
