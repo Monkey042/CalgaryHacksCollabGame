@@ -10,9 +10,9 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        float horizontalMove = Input.GetAxisRaw("Horizontal") * Time.deltaTime * speed * 10;
+        float horizontalMove = Input.GetAxisRaw("Horizontal") * speed * 10;
 
         print(horizontalMove);
 
