@@ -31,6 +31,11 @@ public class Movement : MonoBehaviour
         this.fixedDeltaTime = Time.fixedDeltaTime;
     }
 
+    private void Start()
+    {
+        ChangeCurrentMover.Instance.moversList.Add(this.gameObject);
+    }
+
     private void Update()
     {
         if (isActive)
