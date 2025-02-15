@@ -27,6 +27,11 @@ public class Movement : MonoBehaviour
         initialSize = transform.localScale.y;
     }
 
+    private void Start()
+    {
+        ChangeCurrentMover.Instance.moversList.Add(this.gameObject);
+    }
+
     private void Update()
     {
         if (isActive)
