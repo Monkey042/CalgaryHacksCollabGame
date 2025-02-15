@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
-  moverType: 1
+  moverType: 0
   jumpKey: 32
   jumpForce: 3.5
   shrinkKey: 115
