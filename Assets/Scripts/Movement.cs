@@ -6,7 +6,10 @@ public enum MoverType { Basic, Jumper, Slower, Shrinker, Pusher }
 public class Movement : MonoBehaviour
 {
     public bool isActive;
-    [SerializeField] private float speed;
+    [SerializeField] private float speed = 1.5f;
+    private float trueSpeed;
+    [SerializeField] private float slowFactor = 4;
+    private float fixedDeltaTime;
     private Rigidbody2D rb;
 
     public MoverType moverType;
@@ -25,6 +28,7 @@ public class Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         initialSize = transform.localScale.y;
+        this.fixedDeltaTime = Time.fixedDeltaTime;
     }
 
     private void Update()
@@ -39,6 +43,10 @@ public class Movement : MonoBehaviour
             {
                 Shrinker();
             }
+            Time.timeScale = 1 / slowFactor;
+            trueSpeed = speed * slowFactor;
+
+            Time.fixedDeltaTime = this.fixedDeltaTime * Time.timeScale;
         }
     }
 
@@ -46,7 +54,7 @@ public class Movement : MonoBehaviour
     {
         if (isActive)
         {
-            float horizontalMove = Input.GetAxis("Horizontal") * speed * 10;
+            float horizontalMove = Input.GetAxis("Horizontal") * trueSpeed * 10;
             rb.linearVelocity = new Vector2(horizontalMove, rb.linearVelocity.y);
         }
 

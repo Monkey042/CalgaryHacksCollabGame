@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class MovableObject : MonoBehaviour
 {
+    private void Update()
+    {
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+    }
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.layer == 6)
@@ -9,9 +14,10 @@ public class MovableObject : MonoBehaviour
             if (other.gameObject.GetComponent<Movement>().moverType == MoverType.Pusher)
             {
                 gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-            } 
+
+            }
             else if (other.gameObject.GetComponent<Movement>().moverType != MoverType.Pusher)
-            { 
+            {
                 gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
             }
         }
