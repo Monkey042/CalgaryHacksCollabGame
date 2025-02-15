@@ -4,7 +4,7 @@ public class CameraTrackPlayers : MonoBehaviour
 {
     public GameObject player;
     public float offsetRadiusX = 8.5f;
-    public float offsetRadiusY = 4f;
+    public float offsetRadiusY = 3f;
     
     private Vector2 player_prev_position;
 
