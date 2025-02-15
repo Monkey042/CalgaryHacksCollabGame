@@ -3,7 +3,8 @@ using UnityEngine;
 public class CameraTrackPlayers : MonoBehaviour
 {
     public GameObject player;
-    public float offsetRadius = 8.5f;
+    public float offsetRadiusX = 8.5f;
+    public float offsetRadiusY = 4f;
     
     private Vector2 player_prev_position;
 
@@ -16,12 +17,22 @@ public class CameraTrackPlayers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(player.transform.position, transform.position) > offsetRadius)
+        Vector2 delta_position = (Vector2)player.transform.position - player_prev_position;
+        Vector3 newPosition = transform.position;
+
+        // Adjust X
+        if (Mathf.Abs(player.transform.position.x - transform.position.x) > offsetRadiusX)
         {
-            Vector2 delta_position;
-            delta_position = (Vector2)player.transform.position - player_prev_position;
-            transform.Translate(delta_position);
+            newPosition.x += delta_position.x;
         }
+
+        // Adjust Y
+        if (Mathf.Abs(player.transform.position.y - transform.position.y) > offsetRadiusY)
+        {
+            newPosition.y += delta_position.y;
+        }
+
+        transform.position = newPosition;
         player_prev_position = player.transform.position;
     }
 }
