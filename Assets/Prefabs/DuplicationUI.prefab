@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1659868881490053358}
   - component: {fileID: 6438675091083858878}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Pusher Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
         m_MethodName: duplicate
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 5427744244008757868, guid: 09dd97c3058e9624ba1c1903467e5af7, type: 3}
+          m_ObjectArgument: {fileID: 4857335291827753542, guid: 38fc7d22cd90e1743833f8c56cf3e3f0, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 7889706880708077189}
   - component: {fileID: 5059702240135811128}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Shrinker Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,7 +259,7 @@ MonoBehaviour:
         m_MethodName: duplicate
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 5427744244008757868, guid: cf29ef1a8a067cb43a875503e98769ba, type: 3}
+          m_ObjectArgument: {fileID: 4857335291827753542, guid: 2c14627a630abc147b24e0eebb1195c4, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 8701437133556801298}
   - component: {fileID: 889157535487542979}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Slower Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -392,7 +392,7 @@ MonoBehaviour:
         m_MethodName: duplicate
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 5427744244008757868, guid: 17f61a10f1f6a4345bda8ce858d70bc2, type: 3}
+          m_ObjectArgument: {fileID: 4857335291827753542, guid: 956a779bb8c056a43a0e4bfe27e990e6, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -570,7 +570,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 'Slower
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -759,6 +761,7 @@ MonoBehaviour:
   canvas: {fileID: 2859272940109896073}
   player: {fileID: 0}
   yOffset: 1
+  xOffset: 1
 --- !u!1 &5116536903319382559
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,7 +827,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 'Shrinker
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -960,7 +965,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Jumper
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1096,7 +1101,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 'Pusher
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1256,7 +1263,7 @@ GameObject:
   - component: {fileID: 8824373946674519205}
   - component: {fileID: 4236089058457339660}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Jumper Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1369,7 +1376,7 @@ MonoBehaviour:
         m_MethodName: duplicate
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 5427744244008757868, guid: a60dda823b71f5345a842fae272a3091, type: 3}
+          m_ObjectArgument: {fileID: 4857335291827753542, guid: 309756ddd7aa2dc4187f16ae0d0be9ce, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
