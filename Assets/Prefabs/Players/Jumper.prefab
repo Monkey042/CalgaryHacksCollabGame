@@ -195,7 +195,7 @@ MonoBehaviour:
   heldImmediate: {fileID: 0}
   held: []
   throwKey: 114
-  throwForce: 20
+  throwForce: 30
   upwardsForce: 1.25
 --- !u!1 &7569396849296061841
 GameObject:
