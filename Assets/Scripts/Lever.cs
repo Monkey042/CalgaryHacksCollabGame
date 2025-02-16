@@ -16,7 +16,9 @@ public class Lever : MonoBehaviour
             {
                 to.ActivateFloor();
             }
-            transform.localScale.Set(transform.localScale.x, transform.localScale.y * -1, transform.localScale.z);
+            Vector2 newScale = transform.localScale;
+            newScale.y *= -1f;
+            transform.localScale = newScale;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             activated = true;
         }
