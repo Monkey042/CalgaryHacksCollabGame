@@ -9,6 +9,8 @@ public class ChangeCurrentMover : MonoBehaviour
 
     public int currentMover = 0;
 
+    public GameObject currentMoverGO;
+
     public KeyCode changeKey = KeyCode.C;
 
     private void Awake()
@@ -27,6 +29,7 @@ public class ChangeCurrentMover : MonoBehaviour
                     moversList[currentMover].GetComponent<Movement>().isActive = false;
                     currentMover++;
                     moversList[currentMover].GetComponent<Movement>().isActive = true;
+                    FindFirstObjectByType<DuplicationUI>().player = moversList[currentMover];
                 }
                 else
                 {
@@ -35,7 +38,7 @@ public class ChangeCurrentMover : MonoBehaviour
                     moversList[currentMover].GetComponent<Movement>().isActive = true;
                 }
             }
-            
         }
+        currentMoverGO = moversList[currentMover];
     }
 }

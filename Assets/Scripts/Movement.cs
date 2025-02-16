@@ -34,7 +34,10 @@ public class Movement : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(AddToMovers());
+        if (!ChangeCurrentMover.Instance.moversList.Contains(this.gameObject))
+        {
+            ChangeCurrentMover.Instance.moversList.Add(this.gameObject);
+        }
     }
 
     private void Update()
@@ -86,11 +89,5 @@ public class Movement : MonoBehaviour
             isShrunk = false;
             this.transform.DOScaleY(initialSize, 0.4f);
         }
-    }
-
-    IEnumerator AddToMovers()
-    {
-        yield return new WaitForSeconds(.3f);
-        ChangeCurrentMover.Instance.moversList.Add(this.gameObject);
     }
 }
