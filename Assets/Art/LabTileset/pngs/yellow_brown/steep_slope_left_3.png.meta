@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      steep_slope_left_3_0: 4590677291867867185
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

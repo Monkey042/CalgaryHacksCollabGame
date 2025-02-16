@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      shallow_slope_left_02_0: -8638103934766139534
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

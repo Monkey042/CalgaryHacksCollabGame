@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sci_fi_bg1_0: -4819282544024676078
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
