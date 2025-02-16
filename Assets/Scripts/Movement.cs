@@ -161,8 +161,8 @@ public class Movement : MonoBehaviour
     IEnumerator CoyoteTime()
     {
         inCoyoteTime = true;
-        yield return new WaitForSeconds(jumperCoyoteTime);
         canJump = false;
+        yield return new WaitForSeconds(jumperCoyoteTime);
         inCoyoteTime = false;
     }
 
