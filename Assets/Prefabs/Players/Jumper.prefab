@@ -181,7 +181,7 @@ MonoBehaviour:
   slowFactor: 1
   moverType: 1
   jumpKey: 32
-  jumpForce: 3.5
+  jumpForce: 4.5
   jumperGroundRadius: 0.2
   groundLayer:
     serializedVersion: 2
@@ -194,8 +194,8 @@ MonoBehaviour:
   heldImmediate: {fileID: 0}
   held: []
   throwKey: 114
-  throwForce: 15
-  upwardsForce: 2
+  throwForce: 20
+  upwardsForce: 1.25
 --- !u!1 &7569396849296061841
 GameObject:
   m_ObjectHideFlags: 0

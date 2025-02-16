@@ -182,6 +182,11 @@ MonoBehaviour:
   moverType: 2
   jumpKey: 32
   jumpForce: 3.5
+  jumperGroundRadius: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  jumperCoyoteTime: 0
   shrinkKey: 115
   changeSize: 1.15
   pickupKey: 102
@@ -189,8 +194,8 @@ MonoBehaviour:
   heldImmediate: {fileID: 0}
   held: []
   throwKey: 114
-  throwForce: 15
-  upwardsForce: 2
+  throwForce: 20
+  upwardsForce: 1.25
 --- !u!1 &7569396849296061841
 GameObject:
   m_ObjectHideFlags: 0
