@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class CameraTrackPlayers : MonoBehaviour
@@ -16,7 +17,8 @@ public class CameraTrackPlayers : MonoBehaviour
             player = ChangeCurrentMover.Instance.currentMoverGO;
             playerPrevPosition = player.transform.position;
 
-            transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10);
+            Vector3 newPos = new Vector3(player.transform.position.x, player.transform.position.y, -10);
+            transform.DOMove(newPos, 1);
         }
 
         Vector2 delta_position = (Vector2)player.transform.position - playerPrevPosition;
