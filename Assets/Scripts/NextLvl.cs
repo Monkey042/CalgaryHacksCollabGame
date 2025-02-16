@@ -8,10 +8,12 @@ public class NextLvl : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         inradius = true;
+        collision.GetComponent<Movement>().headTest.text = "Press: E";
     }
     void OnTriggerExit2D(Collider2D collision)
     {
         inradius = false;
+        collision.GetComponent<Movement>().headTest.text = "";
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

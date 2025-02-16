@@ -947,6 +947,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3168998708391869069, guid: 67915a25b2dff7247a9d8bed3b9c050a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5008216658125663606, guid: 67915a25b2dff7247a9d8bed3b9c050a, type: 3}
       propertyPath: m_Name
       value: DuplicationUI
@@ -1046,6 +1050,10 @@ PrefabInstance:
     - target: {fileID: 6745185608940472174, guid: 67915a25b2dff7247a9d8bed3b9c050a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8329682632257248620, guid: 67915a25b2dff7247a9d8bed3b9c050a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
