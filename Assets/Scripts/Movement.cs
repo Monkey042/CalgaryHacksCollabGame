@@ -18,6 +18,8 @@ public class Movement : MonoBehaviour
     private float fixedDeltaTime;
     private Rigidbody2D rb;
 
+    [SerializeField] private SpriteRenderer spritrend;
+
     public MoverType moverType;
 
     public TMP_Text headTest;
@@ -108,6 +110,23 @@ public class Movement : MonoBehaviour
         {
             transform.position = pickerUpperHoldPos.position;
         }
+
+        if (isActive)
+        {
+            float horizontalMove = Input.GetAxis("Horizontal") * trueSpeed * 10;
+
+            print(horizontalMove);
+
+            if (horizontalMove > 0)
+            {
+                spritrend.flipX = true;
+            }
+            else if (horizontalMove < 0)
+            {
+                spritrend.flipX = false;
+            }
+        }
+
     }
 
     private void FixedUpdate()
@@ -116,6 +135,16 @@ public class Movement : MonoBehaviour
         {
             float horizontalMove = Input.GetAxis("Horizontal") * trueSpeed * 10;
             rb.linearVelocity = new Vector2(horizontalMove, rb.linearVelocity.y);
+            if (horizontalMove == 0)
+            {
+                Animator anim = this.GetComponent<Animator>();
+                anim.SetBool("isRunning", false);
+            }
+            else
+            {
+                Animator anim = this.GetComponent<Animator>();
+                anim.SetBool("isRunning", true);
+            }
         }
 
     }
