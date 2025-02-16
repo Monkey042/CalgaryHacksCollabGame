@@ -104,6 +104,11 @@ public class Movement : MonoBehaviour
             {
                 throwDir = new Vector2(1, upwardsForce).normalized;
             }
+
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                throwForce *= 10;
+            }
         }
 
         if (isPickedUp)
