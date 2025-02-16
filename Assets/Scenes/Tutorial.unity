@@ -281,7 +281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 974076017191509510, guid: b1b26c74cd9dfbb41842539b1a56ccd5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.8
+      value: 4.52
       objectReference: {fileID: 0}
     - target: {fileID: 974076017191509510, guid: b1b26c74cd9dfbb41842539b1a56ccd5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -329,7 +329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8554473237752112552, guid: b1b26c74cd9dfbb41842539b1a56ccd5, type: 3}
       propertyPath: movementDuration
-      value: 1
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -570,7 +570,7 @@ GameObject:
   - component: {fileID: 654617737}
   - component: {fileID: 654617736}
   - component: {fileID: 654617738}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1175,7 +1175,7 @@ GameObject:
   - component: {fileID: 1433328850}
   - component: {fileID: 1433328852}
   - component: {fileID: 1433328853}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
