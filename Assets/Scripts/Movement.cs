@@ -1,6 +1,10 @@
 using DG.Tweening;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine; 
+using System.Collections.Generic;
+using System.Linq;
+using System;
 
 public enum MoverType { Basic, Jumper, Slower, Shrinker, Pusher }
 
@@ -30,11 +34,26 @@ public class Movement : MonoBehaviour
     public float changeSize;
     private float initialSize;
 
+    public KeyCode pickupKey = KeyCode.F;
+    public Transform holdPos;
+    private Transform originalHoldPos;
+    private bool isPickedUp;
+    private Transform pickerUpperHoldPos;
+    [SerializeField] private GameObject heldImmediate;
+    public List<GameObject> held = new List<GameObject>();
+
+    public KeyCode throwKey = KeyCode.R;
+    public float throwForce;
+    private Vector2 throwDir;
+    public float upwardsForce = 1;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         initialSize = transform.localScale.y;
         this.fixedDeltaTime = Time.fixedDeltaTime;
+        holdPos = transform.GetChild(0).GetComponent<Transform>();
+        originalHoldPos = transform.GetChild(0).GetComponent<Transform>();
     }
 
     private void Start()
@@ -61,6 +80,30 @@ public class Movement : MonoBehaviour
             trueSpeed = speed * slowFactor;
 
             Time.fixedDeltaTime = this.fixedDeltaTime * Time.timeScale;
+
+            if (Input.GetKeyDown(pickupKey))
+            {
+                Pickup();
+            }
+
+            if (Input.GetKeyDown(throwKey))
+            {
+                Throw();
+            }
+
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                throwDir = new Vector2(-1, upwardsForce);
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                throwDir = new Vector2(1, upwardsForce);
+            }
+        }
+
+        if (isPickedUp)
+        {
+            transform.position = pickerUpperHoldPos.position;
         }
     }
 
@@ -121,5 +164,70 @@ public class Movement : MonoBehaviour
         yield return new WaitForSeconds(jumperCoyoteTime);
         canJump = false;
         inCoyoteTime = false;
+    }
+
+    public void Pickup()
+    {
+        GameObject pickedUp = GetClosestMover();
+        
+        if (pickedUp != null)
+        {
+            Movement pickedUpMovement = pickedUp.GetComponent<Movement>();
+            pickedUpMovement.pickerUpperHoldPos = holdPos;
+            pickedUpMovement.isPickedUp = true;
+            holdPos = pickedUp.transform.GetChild(0).GetComponent<Transform>();
+            held.Add(pickedUp);
+            foreach (GameObject go in pickedUpMovement.held)
+            {
+                held.Add(go);
+            }
+            heldImmediate = held[0];
+            for (int i = 0; i < held.Count; i++)
+            {
+                Movement heldIMovement = held[i].GetComponent<Movement>();
+                heldIMovement.held = new List<GameObject>();
+                for (int j = i + 1; j < held.Count; j++)
+                {
+                    heldIMovement.held.Add(held[j]);
+                }
+                
+                if (heldIMovement.held.Count > 0)
+                {
+                    heldIMovement.heldImmediate = heldIMovement.held[0];
+                }
+
+                heldIMovement.holdPos = held[held.Count - 1].GetComponent<Movement>().holdPos;
+            }
+        }
+    }
+
+    public GameObject GetClosestMover()
+    {
+        GameObject goMin = null;
+        float minDist = 1;
+        Vector3 currentPos = transform.position;
+        foreach (GameObject go in ChangeCurrentMover.Instance.moversList)
+        {
+            float dist = Vector3.Distance(go.transform.position, currentPos);
+            if (dist < minDist && go != gameObject && go.GetComponent<Movement>().isPickedUp == false)
+            {
+                goMin = go;
+                minDist = dist;
+            }
+        }
+        return goMin;
+    }
+
+    public void Throw()
+    {
+        if (heldImmediate != null && isPickedUp == false)
+        { 
+            heldImmediate.GetComponent<Movement>().isPickedUp = false;
+            heldImmediate.GetComponent<Movement>().pickerUpperHoldPos = null;
+            heldImmediate.GetComponent<Rigidbody2D>().AddForce(throwDir * throwForce * 100, ForceMode2D.Force);
+            holdPos = originalHoldPos;
+            heldImmediate = null;
+            held = new List<GameObject>();
+        }
     }
 }

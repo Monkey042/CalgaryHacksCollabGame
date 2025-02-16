@@ -184,6 +184,13 @@ MonoBehaviour:
   jumpForce: 3.5
   shrinkKey: 115
   changeSize: 1.15
+  pickupKey: 102
+  holdPos: {fileID: 2424386203020696973}
+  heldImmediate: {fileID: 0}
+  held: []
+  throwKey: 114
+  throwForce: 15
+  upwardsForce: 2
 --- !u!1 &7569396849296061841
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +216,7 @@ Transform:
   m_GameObject: {fileID: 7569396849296061841}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
