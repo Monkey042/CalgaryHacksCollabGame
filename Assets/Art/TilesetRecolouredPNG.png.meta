@@ -1,0 +1,303 @@
+fileFormatVersion: 2
+guid: 276e8317415ecd949957f461e0fb9b3b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8533585870525213792
+    second: TilesetRecolouredPNG_0
+  - first:
+      213: 5538521611954474951
+    second: TilesetRecolouredPNG_1
+  - first:
+      213: -6619550497994037944
+    second: TilesetRecolouredPNG_2
+  - first:
+      213: -2773316109723729779
+    second: TilesetRecolouredPNG_3
+  - first:
+      213: 8712994728924257101
+    second: TilesetRecolouredPNG_4
+  - first:
+      213: -6285524079307648115
+    second: TilesetRecolouredPNG_5
+  - first:
+      213: -1120593693627032396
+    second: TilesetRecolouredPNG_6
+  - first:
+      213: 201065663954972060
+    second: TilesetRecolouredPNG_7
+  - first:
+      213: -3038694215366736417
+    second: TilesetRecolouredPNG_8
+  - first:
+      213: 2893648604446332499
+    second: TilesetRecolouredPNG_9
+  - first:
+      213: -3323540564370801448
+    second: TilesetRecolouredPNG_10
+  - first:
+      213: -4445818201806583489
+    second: TilesetRecolouredPNG_11
+  - first:
+      213: 8874907422295650594
+    second: TilesetRecolouredPNG_12
+  - first:
+      213: 6107910691713537372
+    second: TilesetRecolouredPNG_13
+  - first:
+      213: 500773346234488687
+    second: TilesetRecolouredPNG_14
+  - first:
+      213: 6715025696433581989
+    second: TilesetRecolouredPNG_15
+  - first:
+      213: -3163102916763387537
+    second: TilesetRecolouredPNG_16
+  - first:
+      213: -1510496138746649676
+    second: TilesetRecolouredPNG_17
+  - first:
+      213: -6183980439675887685
+    second: TilesetRecolouredPNG_18
+  - first:
+      213: -5137417884484095928
+    second: TilesetRecolouredPNG_19
+  - first:
+      213: 6978319008267241489
+    second: TilesetRecolouredPNG_20
+  - first:
+      213: 4851109649038525113
+    second: TilesetRecolouredPNG_21
+  - first:
+      213: -174315778426573556
+    second: TilesetRecolouredPNG_22
+  - first:
+      213: -2873291546257507274
+    second: TilesetRecolouredPNG_23
+  - first:
+      213: -8200311999928920539
+    second: TilesetRecolouredPNG_24
+  - first:
+      213: -3193083647324158013
+    second: TilesetRecolouredPNG_25
+  - first:
+      213: -5592894277086315908
+    second: TilesetRecolouredPNG_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 490
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TilesetRecolouredPNG_0
+      rect:
+        serializedVersion: 2
+        x: 3750
+        y: 0
+        width: 1250
+        height: 1250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c8196be8e89864292df6b23bb28255
+      internalID: 388067776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesetRecolouredPNG_1
+      rect:
+        serializedVersion: 2
+        x: 3750
+        y: 1250
+        width: 1250
+        height: 1250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44e4db8719745649a69de908a8a69be
+      internalID: -1168144213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesetRecolouredPNG_2
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1250
+        width: 1250
+        height: 1250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36219c9d0975f55479b31ca366bf27b8
+      internalID: -1963298198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesetRecolouredPNG_3
+      rect:
+        serializedVersion: 2
+        x: 14690
+        y: 1560
+        width: 1250
+        height: 1250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e163ed58610a8468ea8b575c2a1310
+      internalID: 1879471020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 98c39e8da679524408b4b001d08345e4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TilesetRecolouredPNG_0: 388067776
+      TilesetRecolouredPNG_1: -1168144213
+      TilesetRecolouredPNG_2: -1963298198
+      TilesetRecolouredPNG_3: 1879471020
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
