@@ -18,6 +18,11 @@ public class Movement : MonoBehaviour
     [Header("Jumper Settings")]
     public KeyCode jumpKey = KeyCode.Space;
     public float jumpForce;
+    public float jumperGroundRadius;
+    public LayerMask groundLayer;
+    public float jumperCoyoteTime;
+    private bool canJump;
+    private bool inCoyoteTime, canCoyoteTime;
 
     [Header("Shrinker Settings")]
     private bool isShrunk;
@@ -71,9 +76,28 @@ public class Movement : MonoBehaviour
 
     private void Jumper()
     {
-        if (Input.GetKeyDown(jumpKey))
+        print(canJump);
+
+        if (Input.GetKeyDown(jumpKey) && canJump)
         {
             rb.AddRelativeForceY(jumpForce * 10, ForceMode2D.Impulse);
+            canCoyoteTime = false;
+        }
+
+        Vector2 circleCastPos = new Vector2(transform.position.x, transform.position.y - 1.25f);
+
+        RaycastHit2D hit = Physics2D.CircleCast(circleCastPos, jumperGroundRadius, Vector2.down, 0f, groundLayer);
+        if(hit)
+        {
+            canJump = true;
+            canCoyoteTime = true;
+        }
+        else
+        {
+            if(!inCoyoteTime && canCoyoteTime)
+            {
+                StartCoroutine(CoyoteTime());
+            }
         }
     }
 
@@ -89,5 +113,13 @@ public class Movement : MonoBehaviour
             isShrunk = false;
             this.transform.DOScaleY(initialSize, 0.4f);
         }
+    }
+
+    IEnumerator CoyoteTime()
+    {
+        inCoyoteTime = true;
+        yield return new WaitForSeconds(jumperCoyoteTime);
+        canJump = false;
+        inCoyoteTime = false;
     }
 }

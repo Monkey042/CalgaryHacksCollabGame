@@ -182,6 +182,11 @@ MonoBehaviour:
   moverType: 1
   jumpKey: 32
   jumpForce: 3.5
+  jumperGroundRadius: 0.2
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  jumperCoyoteTime: 0.4
   shrinkKey: 115
   changeSize: 1.15
 --- !u!1 &7569396849296061841
