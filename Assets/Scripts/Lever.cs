@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Lever : MonoBehaviour
 {
-    public List<MovingFloor> FloorList;
+    public List<ToggleableObstacle> toggleableObstacles;
 
     private bool activated = false;
 
@@ -12,9 +12,9 @@ public class Lever : MonoBehaviour
     {
         if (!activated)
         {
-            foreach (MovingFloor mv in FloorList)
+            foreach (ToggleableObstacle to in toggleableObstacles)
             {
-                mv.ActivateFloor();
+                to.ActivateFloor();
             }
             transform.localScale.Set(transform.localScale.x, transform.localScale.y * -1, transform.localScale.z);
             gameObject.GetComponent<BoxCollider2D>().enabled = false;

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 317790083471844179}
   - component: {fileID: 3458948465122393525}
   - component: {fileID: 5478290283073374356}
-  - component: {fileID: 1017789824938476311}
+  - component: {fileID: 6364222787008250986}
   m_Layer: 7
-  m_Name: MovingFloor
+  m_Name: Toggleable Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2017714497351978068}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -46.35, y: -1.12, z: 0}
   m_LocalScale: {x: 7.2822213, y: 1.1711701, z: 1}
   m_ConstrainProportionsScale: 0
@@ -135,7 +135,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1017789824938476311
+--- !u!114 &6364222787008250986
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,4 +149,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   basePosition: {x: 0, y: 0}
   xOffset: 5
+  yOffset: 0
   movementDuration: 2

@@ -1,12 +1,13 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class MovingFloor : MonoBehaviour
+public class ToggleableObstacle : MonoBehaviour
 {
     [SerializeField]
     private Vector2 basePosition;
 
     public float xOffset = 5;
+    public float yOffset = 0;
     public float movementDuration = 2;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -18,6 +19,7 @@ public class MovingFloor : MonoBehaviour
 
     public void ActivateFloor()
     {
-        transform.DOMoveX(basePosition.x + xOffset, movementDuration);
+        Vector2 offset = new Vector2(xOffset, yOffset);
+        transform.DOMove(basePosition + offset, movementDuration);
     }
 }
