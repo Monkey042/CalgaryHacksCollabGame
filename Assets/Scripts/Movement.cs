@@ -5,6 +5,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using TMPro;
 
 public enum MoverType { Basic, Jumper, Slower, Shrinker, Pusher }
 
@@ -18,6 +19,8 @@ public class Movement : MonoBehaviour
     private Rigidbody2D rb;
 
     public MoverType moverType;
+
+    public TMP_Text headTest;
 
     [Header("Jumper Settings")]
     public KeyCode jumpKey = KeyCode.Space;
