@@ -126,7 +126,7 @@ MonoBehaviour:
         m_MethodName: duplicate
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4857335291827753542, guid: 38fc7d22cd90e1743833f8c56cf3e3f0, type: 3}
+          m_ObjectArgument: {fileID: 4857335291827753542, guid: da58c942eaaca51499dc824427dff055, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1376,7 +1376,7 @@ MonoBehaviour:
         m_MethodName: duplicate
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4857335291827753542, guid: 309756ddd7aa2dc4187f16ae0d0be9ce, type: 3}
+          m_ObjectArgument: {fileID: 4857335291827753542, guid: 3f32fce3d1d9bb044979c26e71199a08, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
