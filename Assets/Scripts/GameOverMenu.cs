@@ -6,15 +6,8 @@ public class GameOverMenu : MonoBehaviour
     public int SceneNum;
     public static bool GameIsPaused = false;
     public GameObject GOMenuUI;
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.T)) {
-            GameOver();
-        }
-    }    
-    void GameOver() {
+    
+    public void GameOver() {
         GOMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
