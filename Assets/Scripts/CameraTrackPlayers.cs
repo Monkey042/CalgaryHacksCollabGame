@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class CameraTrackPlayers : MonoBehaviour
@@ -5,19 +6,22 @@ public class CameraTrackPlayers : MonoBehaviour
     public GameObject player;
     public float offsetRadiusX = 8.5f;
     public float offsetRadiusY = 3f;
-    
-    private Vector2 player_prev_position;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    private Vector2 playerPrevPosition;
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 delta_position = (Vector2)player.transform.position - player_prev_position;
+        if (ChangeCurrentMover.Instance.currentMoverGO != player)
+        {
+            player = ChangeCurrentMover.Instance.currentMoverGO;
+            playerPrevPosition = player.transform.position;
+
+            Vector3 newPos = new Vector3(player.transform.position.x, player.transform.position.y, -10);
+            transform.DOMove(newPos, 1);
+        }
+
+        Vector2 delta_position = (Vector2)player.transform.position - playerPrevPosition;
         Vector3 newPosition = transform.position;
 
         // Adjust X
@@ -33,6 +37,6 @@ public class CameraTrackPlayers : MonoBehaviour
         }
 
         transform.position = newPosition;
-        player_prev_position = player.transform.position;
+        playerPrevPosition = player.transform.position;
     }
 }
