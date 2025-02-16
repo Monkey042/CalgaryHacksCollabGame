@@ -96,11 +96,11 @@ public class Movement : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.A))
             {
-                throwDir = new Vector2(-1, upwardsForce);
+                throwDir = new Vector2(-1, upwardsForce).normalized;
             }
             else if (Input.GetKeyDown(KeyCode.D))
             {
-                throwDir = new Vector2(1, upwardsForce);
+                throwDir = new Vector2(1, upwardsForce).normalized;
             }
         }
 

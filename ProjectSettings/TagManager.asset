@@ -13,11 +13,11 @@ TagManager:
   - UI
   - Player
   - Ground
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Moveable Object
+  - Pusher
+  - Player Blocker
+  - Jumper
+  - Jumper Blocker
   - 
   - 
   - 

@@ -7,19 +7,15 @@ public class MovableObject : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.gameObject.layer == 6)
+        if (collision.gameObject.layer == 9)
         {
-            if (other.gameObject.GetComponent<Movement>().moverType == MoverType.Pusher)
-            {
-                gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-
-            }
-            else if (other.gameObject.GetComponent<Movement>().moverType != MoverType.Pusher)
-            {
-                gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
-            }
+            gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        }
+        else if (collision.gameObject.layer == 6 || collision.gameObject.layer == 11)
+        {
+            gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
         }
     }
 }
