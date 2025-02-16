@@ -8,6 +8,11 @@ public class DuplicationUI : MonoBehaviour
 
     public float yOffset = 1f, xOffset = 1f;
 
+    private void Update()
+    {
+        player = ChangeCurrentMover.Instance.currentMoverGO;
+    }
+
     public void enableCanvas() 
     {
         Time.timeScale = 0f;
