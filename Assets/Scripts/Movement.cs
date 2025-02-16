@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System.Collections;
 using UnityEngine; 
 
 public enum MoverType { Basic, Jumper, Slower, Shrinker, Pusher }
@@ -33,7 +34,7 @@ public class Movement : MonoBehaviour
 
     private void Start()
     {
-        ChangeCurrentMover.Instance.moversList.Add(this.gameObject);
+        StartCoroutine(AddToMovers());
     }
 
     private void Update()
@@ -85,5 +86,11 @@ public class Movement : MonoBehaviour
             isShrunk = false;
             this.transform.DOScaleY(initialSize, 0.4f);
         }
+    }
+
+    IEnumerator AddToMovers()
+    {
+        yield return new WaitForSeconds(.3f);
+        ChangeCurrentMover.Instance.moversList.Add(this.gameObject);
     }
 }
