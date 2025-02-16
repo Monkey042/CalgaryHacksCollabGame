@@ -267,6 +267,7 @@ MonoBehaviour:
   isActive: 0
   speed: 1.5
   slowFactor: 1
+  spitrend: {fileID: 8182085100930524722}
   moverType: 3
   headTest: {fileID: 0}
   jumpKey: 32

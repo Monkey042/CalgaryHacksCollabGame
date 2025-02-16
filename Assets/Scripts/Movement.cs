@@ -18,6 +18,8 @@ public class Movement : MonoBehaviour
     private float fixedDeltaTime;
     private Rigidbody2D rb;
 
+    [SerializeField] SpriteRenderer spitrend;
+
     public MoverType moverType;
 
     public TMP_Text headTest;
@@ -107,6 +109,19 @@ public class Movement : MonoBehaviour
         if (isPickedUp)
         {
             transform.position = pickerUpperHoldPos.position;
+        }
+
+        if (isActive)
+        {
+            float horizontalMove = Input.GetAxis("Horizontal") * trueSpeed * 10;
+            if(horizontalMove > 0)
+            {
+                spitrend.flipX = true;
+            }
+            else if(horizontalMove < 0)
+            {
+                spitrend.flipX = false;
+            }
         }
     }
 

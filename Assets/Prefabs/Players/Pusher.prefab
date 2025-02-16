@@ -180,6 +180,7 @@ MonoBehaviour:
   isActive: 0
   speed: 1.5
   slowFactor: 1
+  spitrend: {fileID: 1659307588733731168}
   moverType: 4
   headTest: {fileID: 0}
   jumpKey: 32
