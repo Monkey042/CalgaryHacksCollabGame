@@ -6,40 +6,58 @@ public class MovingObstacle : MonoBehaviour
     [SerializeField]
     private Vector2 basePosition;
     [SerializeField]
-    private bool isMovingUp = false;
-    [SerializeField]
-    private bool atBase = true;
+    private bool movingAway = true;
 
-    public float yOffsetUp = 5;
+    public Vector2 offset;
     public float movementDuration = 2;
+
+    private float distMoved;
+    private float distGoal;
+
+    public bool toggled = false;
+    public GameObject button;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        basePosition.x = Mathf.Floor(transform.position.x);
-        basePosition.y = Mathf.Floor(transform.position.y);
+        distGoal = (offset.x + basePosition.x) + (offset.y + basePosition.y);
+        basePosition = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Mathf.Floor(transform.position.y) <= basePosition.y)
+        if (button == null || button.GetComponent<ButtonScript>().isButtonPressed)
         {
-            atBase = true;
-        } else
+            toggled = true;
+        }
+        else
         {
-            atBase = false;
+            toggled = false;
         }
 
-        if (transform.position.y < basePosition.y + yOffsetUp && !isMovingUp && atBase)
+        if (toggled)
         {
-            isMovingUp = true;
-            transform.DOMoveY(basePosition.y + yOffsetUp, movementDuration);
+            distMoved = (transform.position.x - basePosition.x) + (transform.position.y - basePosition.y);
+
+            if (distMoved >= distGoal - 0.01)
+            {
+                movingAway = false;
+            } 
+            else if (distMoved < 0.01)
+            {
+                movingAway = true;
+            }
+
+            if (movingAway)
+            {
+                transform.DOMove(basePosition + offset, movementDuration);
+            }
+            else
+            {
+                transform.DOMove(basePosition, movementDuration);
+            }
         }
-        else if (transform.position.y >= basePosition.y + yOffsetUp && isMovingUp && !atBase)
-        {
-            isMovingUp = false;
-            transform.DOMoveY(basePosition.y, movementDuration);
-        }
+
     }
 }

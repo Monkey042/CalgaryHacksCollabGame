@@ -1,9 +1,11 @@
 using DG.Tweening;
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveOnCommand : MonoBehaviour
 {
-    public GameObject connectedButton;
+    public List<GameObject> connectedButtons = new List<GameObject>();
     public Vector2 moveOffsets;
     public float animDuration = 1f;
 
@@ -17,12 +19,24 @@ public class MoveOnCommand : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (connectedButton.GetComponent<ButtonScript>().isButtonPressed == true)
+        if (allButtonsPressed())
         {
             transform.DOMove(origPos + moveOffsets, animDuration);
         } else
         {
             transform.DOMove(origPos, animDuration);
         }
+    }
+
+    public bool allButtonsPressed()
+    {
+        foreach (GameObject go in connectedButtons)
+        {
+            if (!go.GetComponent<ButtonScript>().isButtonPressed)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }

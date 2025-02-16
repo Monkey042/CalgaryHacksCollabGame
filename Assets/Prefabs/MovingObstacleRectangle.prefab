@@ -371,10 +371,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   basePosition: {x: 0, y: 0}
-  isMovingUp: 0
-  atBase: 1
-  yOffsetUp: 5
+  movingAway: 1
+  offset: {x: 0, y: 0}
   movementDuration: 2
+  toggled: 1
+  button: {fileID: 0}
 --- !u!61 &8305362605664327354
 BoxCollider2D:
   m_ObjectHideFlags: 0
